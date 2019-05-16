@@ -6,12 +6,15 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman "default" "default"
+\font_roman "lmodern" "default"
 \font_sans "default" "default"
 \font_typewriter "default" "default"
 \font_math "auto" "auto"
@@ -138,6 +141,30 @@ Alon Emanuel - 205894058
 \begin_inset FormulaMacro
 \newcommand{\uniff}[1]{\underset{\left[#1\right]}{\iff}}
 {\underset{\left[#1\right]}{\iff}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\argmax}{\text{argmax}}
+{\text{argmax}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\argmin}{\text{argmin}}
+{\text{argmin}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\N}{\mathcal{N}}
+{\mathcal{N}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\sign}{\text{sign}}
+{\text{sign}}
 \end_inset
 
 
@@ -370,7 +397,7 @@ Now, since
 \begin_inset Formula 
 \begin{align*}
 \p_{\D}\left(h_{t}\left(x\right)=1\right) & =\p_{Z\sim U\left[0,1\right]}\left(Z\ge t\right)\\
- & =t
+ & =1-t
 \end{align*}
 
 \end_inset
@@ -379,16 +406,49 @@ Now, since
 \end_layout
 
 \begin_layout Itemize
-If we want 
-\begin_inset Formula $\tpr\left(x\right)=p$
+Since we want 
+\begin_inset Formula $1-t=p$
 \end_inset
 
-, then 
+, we get that 
 \begin_inset Formula $t$
 \end_inset
 
- must be equal to 
-\begin_inset Formula $p$
+ needs to be 
+\begin_inset Formula $1-p$
+\end_inset
+
+ in order to obtain 
+\begin_inset Formula $\tpr\left(t\right)=p$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\qed$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Q3.b
+\end_layout
+
+\begin_layout Itemize
+Since 
+\begin_inset Formula $\p_{\D}\left(h_{t}\left(x\right)\mid y=0\right)=\p_{\D}\left(h_{t}\left(x\right)\right)$
+\end_inset
+
+, we can use the same calculation above and get that 
+\begin_inset Formula $\fpr\left(t\right)=p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The ROC curve in this case would be the graph of 
+\begin_inset Formula $f\left(x\right)=x$
 \end_inset
 
 .
@@ -404,89 +464,6 @@ If we want
 status open
 
 \begin_layout Plain Layout
-this is terribly wrong.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection*
-Q3.b
-\end_layout
-
-\begin_layout Itemize
-Assume 
-\begin_inset Formula $\tpr\left(t\right)=p$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-From the law of total probability, 
-\begin_inset Formula 
-\[
-\p_{\D}\left(h_{t}\left(x\right)=1\mid y=1\right)\p\left(y=1\right)+\p_{\D}\left(h_{t}\left(x\right)=1\mid y=0\right)\p\left(y=0\right)=1
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Since 
-\begin_inset Formula $\tpr\left(t\right)=p$
-\end_inset
-
-, and 
-\begin_inset Formula $\p_{\D}\left(y=1\right)+\p_{\D}\left(y=0\right)=1$
-\end_inset
-
-,
-\begin_inset Formula 
-\[
-p\cdot\p_{\D}\left(y=1\right)+\fpr\left(t\right)\cdot\left(1-\p_{\D}\left(y=1\right)\right)=1
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-From this we get:
-\begin_inset Formula 
-\begin{align*}
-\fpr\left(t\right) & =\frac{1-p\cdot\p_{\D}\left(y=1\right)}{1-\p_{\D}\left(y=1\right)}\\
- & \uneq 1\frac{1}{1-\gamma}-p\cdot\frac{\gamma}{1-\gamma}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $\left[1\right]:$
-\end_inset
-
-
-\begin_inset Formula $\gamma=\p_{\D}\left(y=1\right)$
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 co
 \end_layout
 
@@ -496,7 +473,7 @@ co
 \end_layout
 
 \begin_layout Subsection*
-Q4.a
+Q4.b
 \end_layout
 
 \begin_layout Itemize
@@ -564,24 +541,175 @@ co
 \end_layout
 
 \begin_layout Subsection*
-Q4.b
+Q5.a
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_layout Itemize
+Assume an LDA model of the data.
+ Namely, 
+\begin_inset Formula $X\mid Y=0\sim\N\left(\mu_{0},\Sigma\right)$
+\end_inset
 
-\begin_layout Plain Layout
-co
+ and 
+\begin_inset Formula $X\mid Y=1\sim\N\left(\mu_{1},\Sigma\right)$
+\end_inset
+
+.
+ Also, denote the marginal distributions 
+\begin_inset Formula $\D\left[Y=0\right]=\pi_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\D\left[Y=1\right]=\pi_{1}$
+\end_inset
+
+.
 \end_layout
+
+\begin_layout Itemize
+Recall that the Bayes optimal classifier is defined to be:
+\begin_inset Formula 
+\begin{align*}
+f_{\D}\left(x\right) & =\underset{y\in\left\{ 0,1\right\} }{\argmax}\D\left[Y=y\mid X=x\right]\\
+ & =\begin{cases}
+1 & \D\left[Y=1\mid X=x\right]\ge\frac{1}{2}\\
+0 & else
+\end{cases}
+\end{align*}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection*
-Q5.a
+\begin_layout Itemize
+Also, recall a result we saw in recitation:
+\begin_inset Formula 
+\begin{align*}
+h_{\D}\left(x\right) & =\underset{y\in\left\{ 0,1\right\} }{\argmax}\left[x^{T}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{T}\Sigma^{-1}\mu_{y}+\log\left(\pi_{y}\right)\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Given an 
+\begin_inset Formula $x$
+\end_inset
+
+, denote 
+\begin_inset Formula $\Psi\left(y\right)=x^{T}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{T}\Sigma^{-1}\mu_{y}+\log\left(\pi_{y}\right)$
+\end_inset
+
+, and notice that we want to get the following:
+\begin_inset Formula 
+\[
+h_{\D}\left(x\right)=\begin{cases}
+1 & \Psi\left(1\right)\ge\Psi\left(0\right)\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We can rephrase this and get:
+\begin_inset Formula 
+\[
+h_{\D}\left(x\right)=\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We have that: 
+\begin_inset Formula 
+\begin{align*}
+\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right) & =\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)\\
+ & =\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)\\
+ & =\sign\left(x^{T}\Sigma^{-1}\mu_{1}-\frac{1}{2}\mu_{1}^{T}\Sigma^{-1}\mu_{1}+\log\left(\pi_{1}\right)-x^{T}\Sigma^{-1}\mu_{0}+\frac{1}{2}\mu_{0}^{T}\Sigma^{-1}\mu_{0}-\log\left(\pi_{0}\right)\right)\\
+ & =\sign\left(x^{T}\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)-\frac{1}{2}\left(\mu_{1}^{T}-\mu_{0}^{T}\right)\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)+\log\left(\nicefrac{\pi_{1}}{\pi_{0}}\right)\right)\\
+ & =\sign\left(\left\langle \left(x;1\right),\left(w';b\right)\right\rangle \right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Where 
+\begin_inset Formula $w'=\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=-\frac{1}{2}\left(\mu_{1}^{T}-\mu_{0}^{T}\right)\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)+\log\left(\nicefrac{\pi_{1}}{\pi_{0}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+To conclude, 
+\begin_inset Formula $w=\left(w';b\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\qed$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+bla bla
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+sdgsdfg
+\end_layout
+
+\begin_layout Enumerate
+fdgsdfg
+\end_layout
+
+\begin_layout Enumerate
+fdgdfg
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+yo yo yo
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I said
+\end_layout
+
+\begin_layout Enumerate
+yo
+\end_layout
+
+\begin_layout Enumerate
+woohoo
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+
 \end_layout
 
 \begin_layout Standard

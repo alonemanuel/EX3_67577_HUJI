@@ -6,6 +6,9 @@
 \origin unavailable
 \textclass article
 \use_default_options true
+\begin_modules
+theorems-ams
+\end_modules
 \maintain_unincluded_children false
 \language english
 \language_package default
@@ -29,9 +32,10 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
-\use_geometry false
+\use_geometry true
 \use_package amsmath 1
 \use_package amssymb 1
 \use_package cancel 1
@@ -44,6 +48,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -55,6 +60,13 @@
 \shortcut idx
 \color #008000
 \end_index
+\leftmargin 2cm
+\topmargin 1cm
+\rightmargin 2cm
+\bottommargin 1cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation indent
@@ -84,119 +96,9 @@ Alon Emanuel - 205894058
 \end_layout
 
 \begin_layout Standard
-
-\lang hebrew
-\begin_inset FormulaMacro
-\newcommand{\e}{\varepsilon}
-{\varepsilon}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\E}{\mathbb{E}}
-{\mathbb{E}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\n}{\mathbb{N}}
-{\mathbb{N}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\r}{\mathbb{R}}
-{\mathbb{R}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\p}{\mathbb{P}}
-{\mathbb{P}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\renewcommand{\r}{\mathbb{R}}
-{\mathbb{R}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\F}{\mathcal{F}}
-{\mathcal{F}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\f}{\mathbb{F}}
-{\mathbb{F}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\ch}[2]{\underset{#2}{\underbrace{#1}}}
-{\underset{#2}{\underbrace{#1}}}
-\end_inset
-
-ּ
-\begin_inset FormulaMacro
-\newcommand{\A}{\mathcal{A}}
-{\mathcal{A}}
-\end_inset
-
-ּ
-\begin_inset FormulaMacro
-\newcommand{\B}{\mathcal{B}}
-{\mathcal{B}}
-\end_inset
-
-ּּ
-\begin_inset FormulaMacro
-\newcommand{\Y}{\mathcal{Y}}
-{\mathcal{Y}}
-\end_inset
-
-ּּ
-\begin_inset FormulaMacro
-\newcommand{\X}{\mathcal{X}}
-{\mathcal{X}}
-\end_inset
-
-ּ
-\begin_inset FormulaMacro
-\newcommand{\D}{\mathcal{D}}
-{\mathcal{D}}
-\end_inset
-
-
 \begin_inset FormulaMacro
 \newcommand{\H}{\mathcal{H}}
 {\mathcal{H}}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\a}{\alpha}
-{\alpha}
-\end_inset
-
- 
-\begin_inset FormulaMacro
-\newcommand{\bsum}[3]{\stackrel[#2]{#1}{\sum}#3}
-{\stackrel[#2]{#1}{\sum}#3}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\om}{\Omega}
-{\Omega}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\w}{\omega}
-{\omega}
 \end_inset
 
 
@@ -207,66 +109,62 @@ Alon Emanuel - 205894058
 
 
 \begin_inset FormulaMacro
-\newcommand{\lr}{\Leftrightarrow}
-{\Leftrightarrow}
+\newcommand{\tpr}{\text{TPR}}
+{\text{TPR}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\comdots}{,\dots,}
-{,\dots,}
+\newcommand{\p}{\mathbb{P}}
+{\mathbb{P}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\node}[1]{*++[o][F]{#1}}
+\newcommand{\D}{\mathcal{D}}
+{\mathcal{D}}
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-
-\lang hebrew
 \begin_inset FormulaMacro
-\newcommand{\equn}[1]{\underset{\left[#1\right]}{=}}
+\newcommand{\fpr}{\text{FPR}}
+{\text{FPR}}
+\end_inset
+
+
+\begin_inset FormulaMacro
+\newcommand{\uneq}[1]{\underset{\left[#1\right]}{=}}
 {\underset{\left[#1\right]}{=}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\iffun}[1]{\underset{\left[#1\right]}{\iff}}
+\newcommand{\uniff}[1]{\underset{\left[#1\right]}{\iff}}
 {\underset{\left[#1\right]}{\iff}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\im}{\text{Im}}
-{\text{Im}}
+\newcommand{\argmax}{\text{argmax}}
+{\text{argmax}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\ker}{\text{Ker}}
-{\text{Ker}}
+\newcommand{\argmin}{\text{argmin}}
+{\text{argmin}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\norm}[1]{\left\Vert #1\right\Vert }
-{\left\Vert #1\right\Vert }
+\newcommand{\N}{\mathcal{N}}
+{\mathcal{N}}
 \end_inset
 
 
 \begin_inset FormulaMacro
-\newcommand{\part}{\partial}
-{\partial}
-\end_inset
-
-
-\begin_inset FormulaMacro
-\newcommand{\pac}{\text{PAC}}
-{\text{PAC}}
+\newcommand{\sign}{\text{sign}}
+{\text{sign}}
 \end_inset
 
 
@@ -470,14 +368,63 @@ ROC Curve and Random Classification
 Q3.a
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_layout Itemize
+Since 
+\begin_inset Formula $h_{t}\left(x\right)$
+\end_inset
 
-\begin_layout Plain Layout
-co
+ is defined with no regard to 
+\begin_inset Formula $y$
+\end_inset
+
+, we get that 
+\begin_inset Formula $\p_{\D}\left(h_{t}\left(x\right)=1\mid y\right)=\p_{\D}\left(h_{t}\left(x\right)=1\right)$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+Now, since 
+\begin_inset Formula $h_{t}\left(x\right)$
+\end_inset
+
+ doesn't take 
+\begin_inset Formula $x$
+\end_inset
+
+ into account, we get that 
+\begin_inset Formula 
+\begin{align*}
+\p_{\D}\left(h_{t}\left(x\right)=1\right) & =\p_{Z\sim U\left[0,1\right]}\left(Z\ge t\right)\\
+ & =1-t
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Since we want 
+\begin_inset Formula $1-t=p$
+\end_inset
+
+, we get that 
+\begin_inset Formula $t$
+\end_inset
+
+ needs to be 
+\begin_inset Formula $1-p$
+\end_inset
+
+ in order to obtain 
+\begin_inset Formula $\tpr\left(t\right)=p$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\qed$
 \end_inset
 
 
@@ -487,21 +434,29 @@ co
 Q3.b
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_layout Itemize
+Since 
+\begin_inset Formula $\p_{\D}\left(h_{t}\left(x\right)\mid y=0\right)=\p_{\D}\left(h_{t}\left(x\right)\right)$
+\end_inset
 
-\begin_layout Plain Layout
-co
+, we can use the same calculation above and get that 
+\begin_inset Formula $\fpr\left(t\right)=p$
+\end_inset
+
+.
 \end_layout
 
+\begin_layout Itemize
+The ROC curve in this case would be the graph of 
+\begin_inset Formula $f\left(x\right)=x$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\qed$
 \end_inset
 
 
-\end_layout
-
-\begin_layout Subsection*
-Q4.a
 \end_layout
 
 \begin_layout Standard
@@ -521,6 +476,57 @@ co
 Q4.b
 \end_layout
 
+\begin_layout Itemize
+Recall that the ROC curve can be defined as the 
+\begin_inset Formula $\tpr$
+\end_inset
+
+ as a function of the 
+\begin_inset Formula $\fpr$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Define 
+\begin_inset Formula $f\left(p\right)=\frac{1}{1-\gamma}-p\cdot\frac{\gamma}{1-\gamma}$
+\end_inset
+
+.
+ That is, 
+\begin_inset Formula $f$
+\end_inset
+
+ is a function that takes a 
+\begin_inset Formula $\tpr$
+\end_inset
+
+ and calculates the 
+\begin_inset Formula $\fpr$
+\end_inset
+
+.
+ This is derived from the revious question.
+\end_layout
+
+\begin_layout Itemize
+Since this is a non-increasing linear polynomial of the 
+\begin_inset Formula $\tpr$
+\end_inset
+
+, then it's inverse - a linear polynomial of the 
+\begin_inset Formula $\fpr$
+\end_inset
+
+, is non-decreasing.
+ 
+\begin_inset Formula $\qed$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Note Note
 status open
@@ -536,6 +542,174 @@ co
 
 \begin_layout Subsection*
 Q5.a
+\end_layout
+
+\begin_layout Itemize
+Assume an LDA model of the data.
+ Namely, 
+\begin_inset Formula $X\mid Y=0\sim\N\left(\mu_{0},\Sigma\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $X\mid Y=1\sim\N\left(\mu_{1},\Sigma\right)$
+\end_inset
+
+.
+ Also, denote the marginal distributions 
+\begin_inset Formula $\D\left[Y=0\right]=\pi_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $\D\left[Y=1\right]=\pi_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Recall that the Bayes optimal classifier is defined to be:
+\begin_inset Formula 
+\begin{align*}
+f_{\D}\left(x\right) & =\underset{y\in\left\{ 0,1\right\} }{\argmax}\D\left[Y=y\mid X=x\right]\\
+ & =\begin{cases}
+1 & \D\left[Y=1\mid X=x\right]\ge\frac{1}{2}\\
+0 & else
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Also, recall a result we saw in recitation:
+\begin_inset Formula 
+\begin{align*}
+h_{\D}\left(x\right) & =\underset{y\in\left\{ 0,1\right\} }{\argmax}\left[x^{T}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{T}\Sigma^{-1}\mu_{y}+\log\left(\pi_{y}\right)\right]
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Given an 
+\begin_inset Formula $x$
+\end_inset
+
+, denote 
+\begin_inset Formula $\Psi\left(y\right)=x^{T}\Sigma^{-1}\mu_{y}-\frac{1}{2}\mu_{y}^{T}\Sigma^{-1}\mu_{y}+\log\left(\pi_{y}\right)$
+\end_inset
+
+, and notice that we want to get the following:
+\begin_inset Formula 
+\[
+h_{\D}\left(x\right)=\begin{cases}
+1 & \Psi\left(1\right)\ge\Psi\left(0\right)\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We can rephrase this and get:
+\begin_inset Formula 
+\[
+h_{\D}\left(x\right)=\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We have that: 
+\begin_inset Formula 
+\begin{align*}
+\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right) & =\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)\\
+ & =\sign\left(\Psi\left(1\right)-\Psi\left(0\right)\right)\\
+ & =\sign\left(x^{T}\Sigma^{-1}\mu_{1}-\frac{1}{2}\mu_{1}^{T}\Sigma^{-1}\mu_{1}+\log\left(\pi_{1}\right)-x^{T}\Sigma^{-1}\mu_{0}+\frac{1}{2}\mu_{0}^{T}\Sigma^{-1}\mu_{0}-\log\left(\pi_{0}\right)\right)\\
+ & =\sign\left(x^{T}\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)-\frac{1}{2}\left(\mu_{1}^{T}-\mu_{0}^{T}\right)\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)+\log\left(\nicefrac{\pi_{1}}{\pi_{0}}\right)\right)\\
+ & =\sign\left(\left\langle \left(x;1\right),\left(w';b\right)\right\rangle \right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Where 
+\begin_inset Formula $w'=\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $b=-\frac{1}{2}\left(\mu_{1}^{T}-\mu_{0}^{T}\right)\Sigma^{-1}\left(\mu_{1}-\mu_{0}\right)+\log\left(\nicefrac{\pi_{1}}{\pi_{0}}\right)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+To conclude, 
+\begin_inset Formula $w=\left(w';b\right)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\qed$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+bla bla
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+sdgsdfg
+\end_layout
+
+\begin_layout Enumerate
+fdgsdfg
+\end_layout
+
+\begin_layout Enumerate
+fdgdfg
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+yo yo yo
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I said
+\end_layout
+
+\begin_layout Enumerate
+yo
+\end_layout
+
+\begin_layout Enumerate
+woohoo
+\end_layout
+
+\end_deeper
+\begin_layout Proof
+
 \end_layout
 
 \begin_layout Standard
